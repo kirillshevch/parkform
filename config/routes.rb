@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root 'home#index'
-
   devise_for :users, defaults: { format: :json }
+  namespace :api do
+    resources :forms, only: [:index, :show] do
+      resources :questions, only: [:index]
+    end
+    resources :responces, only: [:index, :show]
+  end
+  root 'home#index'
 end

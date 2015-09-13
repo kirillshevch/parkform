@@ -1,9 +1,6 @@
 FactoryGirl.define do
   factory :response do
-    form nil
-data "MyText"
-email "MyString"
-user nil
+    email { Faker::Internet.email }
+    data { [] }
   end
-
 end
