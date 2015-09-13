@@ -4,6 +4,7 @@ angular.module("app.forms").directive "question", ->
   template: '<ng-include src="dynamicTemplateUrl"></ng-include>'
   scope:
     question: "="
+    checkForm: "="
   link: (scope) ->
     scope.dynamicTemplateUrl = "forms/question_#{scope.question.question_type}.html"
   controller: ["$scope", ($scope) ->

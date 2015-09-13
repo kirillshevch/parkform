@@ -4,7 +4,7 @@
     .text-norm {{::form.description}}
   .text-line
     %div(ng-repeat="question in form.questions track by question.id")
-      %question(question="question")
+      %question(question="question" check-form="checkForm")
   .text-line.text-center
-    %button.btn.btn-success.btn-lg
-      .text-semi Submit
+    %button.btn.btn-success.btn-lg(ng-click="createResponse()" ng-show="formIsFilled")
+      .text-semi {{::'js.helpers.submit' | translate}}
