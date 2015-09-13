@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@include font-face("Icomoon", "icomoon");
+
+$typo-presets: (text, head, title);
+$typo-start: 0.55em;
+$typo-steps: (xs, sm, norm, md, lg);
+
+@each $preset in $typo-presets {
+  .#{$preset} {
+    @each $step in $typo-steps {
+      $typo-start: $typo-start + 0.15;
+      &-#{$step}{
+        font-size: $typo-start;
+      }
+    }
+  }
+  $typo-start: $typo-start + 0.75;
+}
+
+.line {
+  &-norm {
+    line-height: normal;
+  }
+  &-null {
+    line-height: 0;
+  }
+}
+
+.text {
+  @each $side in (center, right, left){
+    &-#{$side}{
+      text-align: $side;
+    }
+  }
+}
+
+.font {
+  @each $font-weight in $font-weights {
+    &-#{nth($font-weight, 1)}{
+      font-weight: nth($font-weight, 2);
+    }
+  }
+}
