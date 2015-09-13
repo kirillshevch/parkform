@@ -20,6 +20,7 @@ gem 'puma',                     '~> 2.12.3'
 gem 'bower-rails',              '~> 0.10.0'
 
 gem 'i18n-js',                  '>= 3.0.0.rc11'
+gem 'responders',               '~> 2.0' 
 
 group :development, :test do
   gem 'pry-byebug',             '~> 3.2.0'
