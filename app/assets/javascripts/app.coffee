@@ -1,7 +1,18 @@
-app = angular.module 'parkForm',
-  ['ngRoute',
-   'templates',
-   'Devise',
-   'ngCookies',
-   'ngResource'
-  ]
+//= require_tree ./templates
+//= require auth/auth
+//= require core/core
+//= require dashboard/dashboard
+//= require forms/forms
+
+angular.module("app", [
+  "ngRoute",
+  "templates",
+  "Devise",
+  "ngCookies",
+  "ngResource"
+  "app.core"
+  "app.auth"
+  "app.dashboard"
+  "app.forms"
+])
+
