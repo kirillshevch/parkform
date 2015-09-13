@@ -1,0 +1,26 @@
+.border {
+  @each $color in $border-colors {
+    &-#{nth($color, 1)}{
+      border-color: nth($color, 2);
+    }
+  }
+}
+
+.border {
+  @for $i from 1 through length($sides) {
+    &-#{nth($sides, $i)}{
+      @each $side in nth($sides-prop, $i){
+        border-#{$side}-width: 1px;
+        border-style: solid;
+      }
+    } 
+  }
+}
+
+.bg {
+  @each $bg in $bg-colors {
+    &-#{nth($bg, 1)}{
+      background-color: nth($bg, 2);
+    }
+  }
+}

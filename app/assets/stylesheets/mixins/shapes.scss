@@ -1,0 +1,3 @@
+@mixin bg-svg($pic){
+  background-image: url("data:image/svg+xml;base64,#{$pic}");
+}
