@@ -12,6 +12,7 @@ angular.module("app", [
   "ngResource"
   "ui.slider"
   "checklist-model"
+  "pascalprecht.translate"
   "app.core"
   "app.auth"
   "app.dashboard"
