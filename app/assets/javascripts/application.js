@@ -18,6 +18,8 @@
 //= require angular-cookies/angular-cookies
 //= require angular-resource/angular-resource
 //= require angular-ui-slider/src/slider
+//= require angular-translate/angular-translate
+//= require angular-sanitize/angular-sanitize
 //= require checklist-model
 
 //= require app

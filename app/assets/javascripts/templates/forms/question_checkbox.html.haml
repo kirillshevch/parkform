@@ -2,5 +2,5 @@
   .gutter-bottom-sm.font-bold {{::question.title}}
   .clearfix(ng-repeat="item in question.data track by $index")
     %label.form-chekbox.font-norm
-      %input(type="checkbox" checklist-model="$parent.question.response" checklist-value="item")
+      %input(type="checkbox" checklist-model="$parent.question.response" checklist-value="item" ng-change="checkForm()")
         {{item}}

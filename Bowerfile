@@ -2,6 +2,7 @@ asset "angular",            "1.4.5";
 asset "angular-route",      "1.4.5";
 asset "angular-devise",     "1.1.0";
 asset "angular-resource",   "1.4.5";
+asset "angular-sanitize",   "1.4.5";
 asset "angular-cookies",    "1.4.5";
 asset "underscore",         "1.8.3";
 asset "angular-translate",  "2.7.2";
