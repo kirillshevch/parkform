@@ -1,0 +1,5 @@
+%h1 forms#index
+.clearfix(ng-if="ready")
+  .clearfix(ng-repeat="form in forms track by form.id")
+    %a(ng-href="/#/forms/{{::form.id}}")
+      {{::form.title}}

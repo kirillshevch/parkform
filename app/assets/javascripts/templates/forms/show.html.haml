@@ -1,0 +1,7 @@
+.clearfix(ng-if="ready")
+  .text-line
+    .head-xs.font-light {{::form.title}}
+    .text-norm {{::form.description}}
+  .text-line
+    %div(ng-repeat="question in form.questions track by question.id")
+      %question(question="question")
