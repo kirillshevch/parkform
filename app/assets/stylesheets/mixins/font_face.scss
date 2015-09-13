@@ -1,0 +1,12 @@
+@mixin font-face($name, $filename, $weight: normal, $style: normal, $prefix: '') {
+  @font-face {
+    font-family: $name;
+    src: url(asset-path('#{$name}/#{$filename}#{$prefix}.eot'));
+    src: url(asset-path('#{$name}/#{$filename}#{$prefix}.svg##{$name}')) format('svg'),
+         url(asset-path('#{$name}/#{$filename}#{$prefix}.eot?#iefix')) format('embedded-opentype'),
+         url(asset-path('#{$name}/#{$filename}#{$prefix}.woff')) format('woff'),
+         url(asset-path('#{$name}/#{$filename}#{$prefix}.ttf')) format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}

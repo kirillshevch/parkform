@@ -1,0 +1,33 @@
+
+[class^="icon-"], [class*=" icon-"] {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:before { 
+    font-family: "Icomoon";
+  } 
+} 
+.icon-angle-down {
+  &:before {
+    content: "\e600";
+  }
+}
+.icon-angle-up {
+  &:before {
+    content: "\e601";
+  }
+}
+.icon-angle-right {
+  &:before {
+    content: "\e602";
+  }
+}
+.icon-angle-left {
+  &:before {
+    content: "\e603";
+  }
+}
