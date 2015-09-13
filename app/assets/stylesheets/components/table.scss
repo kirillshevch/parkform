@@ -1,0 +1,20 @@
+.table {
+  margin: 0;
+  padding: 0;
+  &.fixed {
+    table-layout: fixed;
+  }
+  display: table;
+  height: 100%;
+  width: 100%;
+  &-cell {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+  }
+}
+@for $i from 1 to 13 {
+  .cell-#{$i}{
+    width: percentage($i / 12);
+  }
+}

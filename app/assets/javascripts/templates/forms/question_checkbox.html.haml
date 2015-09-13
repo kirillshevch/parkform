@@ -1,0 +1,6 @@
+.text-line
+  .gutter-bottom-sm.font-bold {{::question.title}}
+  .clearfix(ng-repeat="item in question.data track by $index")
+    %label.form-chekbox.font-norm
+      %input(type="checkbox" checklist-model="question.response" checklist-value="item")
+        {{item}}

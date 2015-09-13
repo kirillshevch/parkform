@@ -10,6 +10,8 @@ angular.module("app", [
   "Devise",
   "ngCookies",
   "ngResource"
+  "ui.slider"
+  "checklist-model"
   "app.core"
   "app.auth"
   "app.dashboard"
