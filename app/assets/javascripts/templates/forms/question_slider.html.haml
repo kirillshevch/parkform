@@ -1,0 +1,9 @@
+.text-line
+  .gutter-bottom-sm.font-bold {{::question.title}}
+  .row.gutter-bottom
+    .col-xs-6
+      %input.form-control(ng-model="question.response[0]")
+    .col-xs-6
+      %input.form-control(ng-model="question.response[1]")
+  .clearfix
+    %div(ui-slider="{range: true}" min="{{question.data[0]}}" max="{{question.data[1]}}" ng-model="question.response")

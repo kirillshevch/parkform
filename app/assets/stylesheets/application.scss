@@ -1,6 +1,10 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
+@import "jquery-ui/core";
+@import "jquery-ui/slider";
+@import "jquery-ui/theme";
+
 @import "mixins/animation";
 @import "mixins/font_face";
 @import "mixins/forms";
@@ -16,5 +20,8 @@
 
 @import "components/bootstrap";
 @import "components/typography";
+@import "components/gutter";
+@import "components/table";
 @import "components/utilities";
 @import "components/icomoon";
+
