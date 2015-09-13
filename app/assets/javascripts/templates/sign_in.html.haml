@@ -1,0 +1,21 @@
+.sign-errors.alert.alert-danger{"ng-show" => "error"}
+  %ul
+    %li
+      {{error.data.error}}
+.sign-up-form
+  .todo-head.sign-up-head
+    .todo-list-name
+      %p Sign in
+  .todo-form.sign-in-body
+    %form{:name => "signForm", "ng-submit" => "signForm.$valid && signIn()"}
+      .form-group{"ng-class" => "{ 'has-error': signForm.email.$invalid && signForm.email.$touched, 'has-success': signForm.email.$valid }"}
+        %input.todo-input.form-control{:name => "email", "ng-model" => "signinData.email", "validate-email" => "", :placeholder => "Email", :type => "email", :required => true}
+      .form-group.sign-in-last-inp{"ng-class" => "{ 'has-error': signForm.password.$invalid && signForm.password.$touched, 'has-success': signForm.password.$valid }"}
+        %input.todo-input.form-control{:name => "password", "ng-model" => "signinData.password", "ng-minlength" => 8, "ng-pattern" => "/^[a-zA-Z0-9]+/", :placeholder => "Password", :type => "password", :required => true}
+      %input{:id => "remember", "ng-model" => "signinData.remember_me", "type" => "checkbox"}
+      %label.remember-me{"for" => "remember"} Remember me
+      .form-group
+        %input.add-button.sign-up-submit{:name => "commit", :type => "submit", :value => "Sign in"}
+        .todo-list-sign
+          %p Not registered yet?
+          %a{"ng-href" => "#/sign_up"} Sign up
