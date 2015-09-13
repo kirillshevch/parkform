@@ -8,6 +8,9 @@
 
 //= require underscore/underscore
 
+//= require i18n
+//= require i18n/translations
+
 //= require angular/angular
 //= require angular-route/angular-route
 //= require angular-devise/lib/devise
