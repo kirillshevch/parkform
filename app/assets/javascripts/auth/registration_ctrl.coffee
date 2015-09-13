@@ -1,4 +1,4 @@
-angular.module('parkForm').controller('RegistrationsCtrl', ['$scope', 'Auth', '$location', '$rootScope'
+registrationCtrl = ->
   ($scope, Auth, $location, $rootScope) ->
     if $scope.ready && $rootScope.user
       $location.path('/')
@@ -11,4 +11,12 @@ angular.module('parkForm').controller('RegistrationsCtrl', ['$scope', 'Auth', '$
         $location.path('/')
       ), (error) ->
         $scope.error = error
-])
+
+angular.module "app.auth"
+  .controller "registrationCtrl", [
+    "$scope"
+    "Auth"
+    "$location"
+    "$rootScope"
+    registrationCtrl()
+  ]
