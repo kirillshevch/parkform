@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     end
     resources :responces, only: [:index, :show]
   end
+  root 'home#index'
 end
