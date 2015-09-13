@@ -1,5 +1,8 @@
 angular.module('parkForm').controller('SessionsCtrl', ['$scope', 'Auth', '$location', '$rootScope',
   ($scope, Auth, $location, $rootScope) ->
+    if $scope.ready && $rootScope.user
+      $location.path('/')
+      
     $scope.signinData = {}
 
     $scope.logout = ->
