@@ -8,6 +8,9 @@
 
 //= require underscore/underscore
 
+//= require i18n
+//= require i18n/translations
+
 //= require angular/angular
 //= require angular-route/angular-route
 //= require angular-devise/lib/devise
@@ -15,6 +18,8 @@
 //= require angular-cookies/angular-cookies
 //= require angular-resource/angular-resource
 //= require angular-ui-slider/src/slider
+//= require angular-translate/angular-translate
+//= require angular-sanitize/angular-sanitize
 //= require checklist-model
 
 //= require app

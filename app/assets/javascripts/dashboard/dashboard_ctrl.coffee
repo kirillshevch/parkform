@@ -1,7 +1,6 @@
 dashboardCtrl = ->
   ($scope, Auth, $location, $rootScope) ->
-    if $scope.ready && !$rootScope.user
-      $location.path('/sign_up')
+    $location.path('/forms')
 
 angular.module "app.dashboard"
   .controller "dashboardCtrl", [

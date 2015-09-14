@@ -21,5 +21,9 @@ angular.module "app.core"
         templateUrl: 'forms/show.html',
         controller: 'formsShowCtrl'
 
+      .when '/responses/:id',
+        templateUrl: 'responses/show.html',
+        controller: 'responsesShowCtrl'
+
       .otherwise
         redirectTo: '/'

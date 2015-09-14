@@ -6,4 +6,4 @@
     .col-xs-6
       %input.form-control(ng-model="question.response[1]")
   .clearfix
-    %div(ui-slider="{range: true}" min="{{question.data[0]}}" max="{{question.data[1]}}" ng-model="question.response")
+    %div(ui-slider="{range: true}" min="{{question.data[0]}}" ng-change="checkForm()" max="{{question.data[1]}}" ng-model="$parent.question.response")
