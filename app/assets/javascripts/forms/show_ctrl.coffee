@@ -20,7 +20,8 @@ formsShowCtrl = ->
     $scope.checkForm = -> checkForm()
 
     $scope.createResponse = ->
-      data = _.map $scope.form.questions, (q) -> [q.id, q.response ]
+      data = _.map $scope.form.questions, (q) -> 
+        [q.id, q.response ]
 
       Response.create (
         response: 

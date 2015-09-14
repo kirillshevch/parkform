@@ -4,12 +4,12 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
 
-    resources :responses, only: [:show, :create]
-
     resources :forms, only: [:index, :show] do
       resources :questions, only: [:index]
+      resources :responses, only: [:index]
     end
 
+    resources :responses, only: [:show, :create]
   end
 
   root 'home#index'
