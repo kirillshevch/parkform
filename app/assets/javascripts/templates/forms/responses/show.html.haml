@@ -1,0 +1,7 @@
+.clearfix(ng-if="ready")
+  .clearfix(ng-repeat="question in questions")
+    .text-semi.text-md {{::question.title}}
+    %b {{::question.id}}
+    %div
+      %i {{::question.type}}
+    %div {{::question.data}}
