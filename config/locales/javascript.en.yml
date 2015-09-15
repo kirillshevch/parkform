@@ -1,8 +1,24 @@
 en:
   js:
     helpers:
+      cancel: Cancel
+      created_at: Created At
       submit: Submit
       responses: "Total<br /><b>%{total}</b>"
-      created_at: Created At
-    response:
+      nothing_to_show: No information to show 
+    forms:
+      add_new: Add New
+      all: All forms arround the App
+      add_question: Add a question
+      create_new: Create new form
+      from: From
+      responses: Responses
+      see_or_fill: See or Fill
+      to: To
+    responses:
+      all: All responses arrount the App
       count_of: Count of Responses
+      response_for: "Response for:"
+      see_form: See form
+      read_response: Read Response
+      see_all: See all responses

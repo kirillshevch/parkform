@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
-gem 'rails',                    '4.2.1'
-gem 'pg',                       '~> 0.18.3'
 
+gem 'rails',                    '4.2.1'
+
+gem 'pg',                       '~> 0.18.3'
 gem 'sass-rails',               '~> 5.0.0.beta1'
 gem 'bower-rails',              '~> 0.10.0'
 gem 'jquery-ui-rails',          '~> 5.0.5'

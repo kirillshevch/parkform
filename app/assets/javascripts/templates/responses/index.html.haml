@@ -1,0 +1,25 @@
+.table.fixed(ng-if="ready")
+  .table-cell.align-middle(ng-if="!responses.length")
+    .text-center.gutter-vertical
+      .title-lg.color-light
+        = icon :palm 
+      .text-lg.color-light.text-light
+        {{::"js.helpers.nothing_to_show" | translate}}
+
+.clearfix(ng-if="ready")
+  .text-row
+    .title-md.font-light {{::"js.responses.all" | translate}}
+  .clearfix
+    .clearfix(ng-repeat="response in responses track by response.id")
+      .gutter-vertical-sm.border-bottom.border-wheat
+        .table.fixed
+          .table-cell.align-middle.cell-8.text-md.font-light
+            .clearfix
+              %span.text-sm {{::"js.responses.response_for" | translate}}
+              %a.link-inherit(ng-href="/#/forms/{{::response.form_id}}/responses")
+                {{::response.title}}
+          .table-cell.align-middle.cell-4.text-right
+            %a.btn.btn-default(ng-href="/#/responses/{{::response.id}}")
+              .font-light {{::"js.responses.read_response" | translate}}
+            %a.btn.btn-default(ng-href="/#/forms/{{::response.form_id}}")
+              .font-light {{::"js.responses.see_form" | translate}}
