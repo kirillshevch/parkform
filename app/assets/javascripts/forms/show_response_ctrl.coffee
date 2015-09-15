@@ -2,7 +2,7 @@ formsResponsesShowCtrl = ->
   ($scope, FormResponse, $routeParams) ->
     $scope.ready = false
  
-    isChartable = (type) -> type == "checkbox" || type == "radio" || type == "text"
+    isChartable = (type) -> type == "checkbox" || type == "radio" || type == "text" 
 
     prepareQuestion = (question) ->
       {
@@ -18,7 +18,11 @@ formsResponsesShowCtrl = ->
       _.map response.data.form.questions, (question) -> questions[question.id] = prepareQuestion(question)
 
       _.map response.data.responses, (response) -> 
-        _.map response.data, (data) -> questions[data[0]].data.push data[1] 
+        _.map response.data, (data) -> 
+          if questions[data[0]].type == "text"
+            questions[data[0]].data.push response.created_at
+          else
+            questions[data[0]].data.push data[1]
 
       _.map questions, (q) -> q.data = _.countBy(q.data) if isChartable(q.type)
 

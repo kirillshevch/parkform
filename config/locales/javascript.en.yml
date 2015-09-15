@@ -2,3 +2,7 @@ en:
   js:
     helpers:
       submit: Submit
+      responses: "Total<br /><b>%{total}</b>"
+      created_at: Created At
+    response:
+      count_of: Count of Responses

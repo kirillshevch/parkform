@@ -9,9 +9,19 @@
     %script(type="text/javascript")
       window.anonimusUser = #{!user_signed_in?}
   %body(ng-app="app" ng-controller="mainCtrl")
-    .table.fixed.content(ng-if="ready")
+    .table.fixed.content.bg-light(ng-if="ready")
       //%left-aside(user="user" treads="treads")
-      .table-cell.content-center.align-top.relative
+      .table-cell.cell-9em-2x.align-top.bg-light.aside
+        .text-center.clearfix
+          %a.col-12.head-lg.gutter-top.logo(href="/#/")=icon :palm
+        .gutter-horizontal.font-light.text-md
+          .gutter-vertical.row-horizontal
+            .border-top.border-wheat
+              .gutter-horizontal.border-bottom.border-wheat
+                %a.gutter-vertical-sm.col-12(href="/#/forms")=t("aside.forms")
+              .gutter-horizontal.border-bottom.border-wheat
+                %a.gutter-vertical-sm.col-12(href="/#/responses")=t("aside.responses")
+      .table-cell.auto.content-center.align-top.relative.bg-white
         .gutter-top-3x
           .gutter-horizontal.gutter-vertical
             .clearfix
