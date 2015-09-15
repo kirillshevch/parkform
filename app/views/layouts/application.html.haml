@@ -21,8 +21,8 @@
                 %a.gutter-vertical-sm.col-12(href="/#/forms")=t("aside.forms")
               .gutter-horizontal.border-bottom.border-wheat
                 %a.gutter-vertical-sm.col-12(href="/#/responses")=t("aside.responses")
+              .gutter-horizontal.border-bottom.border-wheat
+                %a.gutter-vertical-sm.col-12(href="/#/forms/new")=t("aside.create_new_form")
       .table-cell.auto.content-center.align-top.relative.bg-white
-        .gutter-top-3x
-          .gutter-horizontal.gutter-vertical
-            .clearfix
-              %div(ng-view)
+        .table.fixed
+          .table-cell.gutter-vertical.gutter-horizontal(ng-view)

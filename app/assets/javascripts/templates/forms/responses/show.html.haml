@@ -1,9 +1,17 @@
-.clearfix(ng-if="ready")
-  .clearfix(ng-repeat="question in questions")
-    .text-semi.text-md 
-      .row-horizontal.border-bottom.border-wheat
-        .gutter-vertical.gutter-horizontal
-          .text-md.font-light
-            {{::question.title}}
-            ({{question.type}})
-          %response(question="question")
+.table.fixed(ng-if="ready")
+  .table-cell.align-middle(ng-if="!responsesLength")
+    .text-center.gutter-vertical
+      .title-lg.color-light
+        = icon :palm 
+      .text-lg.color-light.text-light
+        {{::"js.helpers.nothing_to_show" | translate}}
+      
+  .table-cell.align-top(ng-if="responsesLength")
+    .clearfix(ng-repeat="question in questions track by question.id")
+      .text-semi.text-md 
+        .row-horizontal.border-bottom.border-wheat
+          .gutter-vertical.gutter-horizontal
+            .text-md.font-light
+              %b {{$index + 1}}.
+              {{::question.title}}
+            %response(question="question")

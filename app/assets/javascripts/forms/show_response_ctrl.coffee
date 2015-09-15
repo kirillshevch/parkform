@@ -24,13 +24,17 @@ formsResponsesShowCtrl = ->
           else
             questions[data[0]].data.push data[1]
 
-      _.map questions, (q) -> q.data = _.countBy(q.data) if isChartable(q.type)
+      _.map questions, (q) -> 
+        q.data = _.countBy(q.data) if isChartable(q.type)
+        q.data[I18n.t("js.helpers.created_at")] = 0 if q.type == "text"
 
       questions
 
     FormResponse.index (form_id: $routeParams.form_id), (response) -> 
+      $scope.responsesLength = if response.data.responses.length then true else false
       $scope.questions = prepareResponse(response)
       $scope.ready = true
+
 
 angular.module "app.forms"
   .controller "formsResponsesShowCtrl", [

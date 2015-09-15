@@ -41,3 +41,17 @@ $typo-steps: (xs, sm, norm, md, lg);
     }
   }
 }
+.color {
+  @each $color in $text-colors {
+    &-#{nth($color, 1)}{
+      color: nth($color, 2);
+    }
+  }
+}
+.align {
+  @each $align in (middle, top, bottom, baseline){
+    &-#{$align}{
+      vertical-align: $align;
+    }
+  }
+}
