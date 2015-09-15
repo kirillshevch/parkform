@@ -20,14 +20,15 @@ formsShowCtrl = ->
     $scope.checkForm = -> checkForm()
 
     $scope.createResponse = ->
-      data = _.map $scope.form.questions, (q) -> [q.id, q.response ]
+      data = _.map $scope.form.questions, (q) -> 
+        [q.id, q.response ]
 
       Response.create (
         response: 
           form_id: $scope.form.id
           data: data
       ), (response) ->
-        $location.path("/responses/#{response.response.id}")
+        $location.path("/forms/#{$scope.form.id}/responses")
 
 angular.module "app.forms"
   .controller "formsShowCtrl", [

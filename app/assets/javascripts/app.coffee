@@ -1,5 +1,6 @@
 //= require_tree ./templates
 //= require auth/auth
+//= require shared/shared
 //= require core/core
 //= require dashboard/dashboard
 //= require forms/forms
@@ -8,6 +9,7 @@
 angular.module("app", [
   "ngRoute",
   "templates",
+  "highcharts-ng"
   "Devise",
   "ngCookies",
   "ngResource"
@@ -16,6 +18,7 @@ angular.module("app", [
   "checklist-model"
   "pascalprecht.translate"
   "app.core"
+  "app.shared"
   "app.auth"
   "app.dashboard"
   "app.forms"

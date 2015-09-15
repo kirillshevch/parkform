@@ -1,0 +1,15 @@
+.aside {
+  color: #696969;
+  border-right: 1px solid wheat;
+  a {
+    color: inherit;
+    &:hover {
+      color: black;
+    }
+  }
+  .logo {
+    &, &:hover {
+      color: #777;
+    }
+  }
+}

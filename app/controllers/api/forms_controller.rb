@@ -3,12 +3,12 @@ module Api
     respond_to :json
 
     def index
-      @forms = Form.includes(:questions)
+      @forms = Form.all
       respond_with @forms, each_serializer: FormShortSerializer
     end
 
     def show
-      @form = Form.find(params[:id])
+      @form = Form.includes(:questions).find(params[:id]) 
       respond_with @form
     end
   end

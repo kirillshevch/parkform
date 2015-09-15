@@ -1,0 +1,9 @@
+.clearfix(ng-if="ready")
+  .clearfix(ng-repeat="question in questions")
+    .text-semi.text-md 
+      .row-horizontal.border-bottom.border-wheat
+        .gutter-vertical.gutter-horizontal
+          .text-md.font-light
+            {{::question.title}}
+            ({{question.type}})
+          %response(question="question")

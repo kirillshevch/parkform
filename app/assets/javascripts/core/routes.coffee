@@ -21,6 +21,10 @@ angular.module "app.core"
         templateUrl: 'forms/show.html',
         controller: 'formsShowCtrl'
 
+      .when '/forms/:form_id/responses',
+        templateUrl: 'forms/responses/show.html',
+        controller: 'formsResponsesShowCtrl'
+
       .when '/responses/:id',
         templateUrl: 'responses/show.html',
         controller: 'responsesShowCtrl'

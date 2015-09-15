@@ -11,7 +11,7 @@
     &-#{nth($sides, $i)}{
       @each $side in nth($sides-prop, $i){
         border-#{$side}-width: 1px;
-        border-style: solid;
+        border-#{$side}-style: solid;
       }
     } 
   }
@@ -22,5 +22,13 @@
     &-#{nth($bg, 1)}{
       background-color: nth($bg, 2);
     }
+  }
+}
+@for $i from 1 to 13 {
+  .col-#{$i}{
+    display: block;
+    float: left;
+    width: percentage($i / 12);
+    position: relative;
   }
 }

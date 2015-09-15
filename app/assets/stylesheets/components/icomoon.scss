@@ -11,6 +11,11 @@
     font-family: "Icomoon";
   } 
 } 
+.icon-palm {
+  &:before {
+    content: "\e604";
+  }
+}
 .icon-angle-down {
   &:before {
     content: "\e600";

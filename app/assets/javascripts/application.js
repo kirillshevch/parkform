@@ -6,6 +6,8 @@
 //= require jquery-ui/slider
 //= require jquery-ui/effect.all
 
+//= require highcharts-src
+
 //= require underscore/underscore
 
 //= require i18n
@@ -21,5 +23,6 @@
 //= require angular-translate/angular-translate
 //= require angular-sanitize/angular-sanitize
 //= require checklist-model
+//= require highcharts-ng/dist/highcharts-ng
 
 //= require app

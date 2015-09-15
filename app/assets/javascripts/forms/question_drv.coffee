@@ -12,7 +12,7 @@ angular.module("app.forms").directive "question", ->
     if $scope.question_type == "checkbox"
       $scope.question.response = [] 
     else if $scope.question.question_type == "slider"
-      $scope.question.response = $scope.question.data
+      $scope.question.response = _.map $scope.question.data, (e) -> parseInt(e)
     else
       $scope.question.response = ""
 

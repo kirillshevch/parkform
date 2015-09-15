@@ -20,7 +20,7 @@ FactoryGirl.define do
           form.questions.each do |q|
             value = Faker::Lorem.words(3).join(" ")
             value = q.data.sample if q.question_type.to_s == "checkbox" || q.question_type.to_s == "radio"
-            value = rand(100..1000) if q.question_type.to_s == "slider"
+            value = [rand(100..1000), rand(100..1000)] if q.question_type.to_s == "slider"
             data << [ q.id, value ]        
           end 
           r.update!(data: data)
