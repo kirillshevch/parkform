@@ -5,6 +5,7 @@ angular.module "app.core"
       show:   method: "GET"
   .factory "Response", ($resource) ->
     $resource "/api/responses/:id", { id: "@id" },
+      index:  method: "GET"
       show:   method: "GET"
       create: method: 'POST'
   .factory "FormResponse", ($resource) ->

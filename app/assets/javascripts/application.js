@@ -22,6 +22,9 @@
 //= require angular-ui-slider/src/slider
 //= require angular-translate/angular-translate
 //= require angular-sanitize/angular-sanitize
+//= require angular-strap/dist/modules/compiler
+//= require angular-strap/dist/modules/dimensions
+//= require angular-strap/dist/modules/modal
 //= require checklist-model
 //= require highcharts-ng/dist/highcharts-ng
 

@@ -40,7 +40,7 @@ angular.module("app.shared").directive "splineChart", ->
         title: text: I18n.t("js.helpers.created_at")
         categories: xAxis
       yAxis:
-        title: text: I18n.t("js.response.count_of")
+        title: text: I18n.t("js.responses.count_of")
       credits: enabled: false
       loading: false
       size: {}

@@ -1,4 +1,5 @@
 en:
   aside:
-    forms: My Forms
-    responses: My Responses
+    forms: Forms
+    responses: Responses
+    create_new_form: Create form

@@ -17,6 +17,10 @@ angular.module "app.core"
         templateUrl: 'forms/index.html',
         controller: 'formsIndexCtrl'
 
+      .when '/forms/new',
+        templateUrl: 'forms/new.html',
+        controller: 'createFormCtrl'
+
       .when '/forms/:id',
         templateUrl: 'forms/show.html',
         controller: 'formsShowCtrl'
@@ -24,6 +28,10 @@ angular.module "app.core"
       .when '/forms/:form_id/responses',
         templateUrl: 'forms/responses/show.html',
         controller: 'formsResponsesShowCtrl'
+
+      .when '/responses',
+        templateUrl: 'responses/index.html',
+        controller: 'responsesIndexCtrl'
 
       .when '/responses/:id',
         templateUrl: 'responses/show.html',

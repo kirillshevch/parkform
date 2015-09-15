@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
-gem 'rails',                    '4.2.1'
-gem 'pg',                       '~> 0.18.3'
 
+gem 'rails',                    '4.2.1'
+
+gem 'pg',                       '~> 0.18.3'
 gem 'sass-rails',               '~> 5.0.0.beta1'
 gem 'bower-rails',              '~> 0.10.0'
 gem 'jquery-ui-rails',          '~> 5.0.5'
@@ -24,6 +25,9 @@ gem 'puma',                     '~> 2.12.3'
 
 gem 'i18n-js',                  '>= 3.0.0.rc11'
 gem 'responders',               '~> 2.0' 
+
+gem 'knife-solo', ">= 0.3.0.pre2"
+gem 'librarian'
 
 group :development, :test do
   gem 'pry-byebug',             '~> 3.2.0'

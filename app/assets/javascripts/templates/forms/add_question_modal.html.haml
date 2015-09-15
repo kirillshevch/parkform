@@ -1,0 +1,18 @@
+.modal
+  .modal-dialog.modal-lg
+    %form.modal-content(novalidate action="" name="form")
+      .modal-header
+        .row
+          .col-xs-8
+            .text-md {{::"js.forms.add_question" | translate}}
+          .col-xs-4.text-right
+            %span.close(ng-click="$hide()") &times;
+      .modal-body
+        .clearfix
+          %label.font-norm.col-12
+            .gutter-bottom-xs Title
+            .clearfix
+              %input.form-control(ng-model="newQuestion.title" required)
+      .modal-footer(ng-show="form.$valid")
+        %button.btn.btn-default(ng-click="$hide()") {{::"js.helpers.cancel" | translate}}
+        %button.btn.btn-primary(type="submit") {{::"js.forms.add_new" | translate}}

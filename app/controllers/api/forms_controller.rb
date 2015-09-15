@@ -3,7 +3,7 @@ module Api
     respond_to :json
 
     def index
-      @forms = Form.all
+      @forms = Form.order(created_at: :desc)
       respond_with @forms, each_serializer: FormShortSerializer
     end
 

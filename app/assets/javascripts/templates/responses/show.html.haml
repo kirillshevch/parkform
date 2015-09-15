@@ -1,2 +1,19 @@
 .clearfix(ng-if="ready")
-  {{::response}}
+  .text-line
+    .title-md.font-light
+      {{::data.form.title}}
+    .gutter-vertical-sm.border-bottom.border-wheat(ng-repeat="question in data.form.questions track by question.id")
+      .text-md {{::$index + 1}}. {{::question.title}}
+      .text-sm.font-semi(ng-if="question.question_type=='text' || question.question_type=='radio'") {{::data.response[question.id]}}
+      .text-sm.font-semi(ng-if="question.question_type=='checkbox'")
+        .clearfix(ng-repeat="item in data.response[question.id] track by $index" ng-if="isArray(data.response[question.id])") {{::item}}
+        .clearfix(ng-if="!isArray(data.response[question.id])") {{::data.response[question.id]}}
+      .text-sm.font-semi(ng-if="question.question_type=='slider'")
+        .clearfix
+          %b {{::"js.forms.from" | translate}}
+          {{::data.response[question.id][0]}}
+        .clearfix
+          %b {{::"js.forms.to" | translate}}
+          {{::data.response[question.id][1]}}
+  .text-line
+    %a.btn.btn-default.btn-block(ng-href="/#/forms/{{::data.form.id}}/responses") {{::"js.responses.see_all" | translate}}

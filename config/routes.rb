@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :responses, only: [:index]
     end
 
-    resources :responses, only: [:show, :create]
+    resources :responses, only: [:show, :create, :index]
   end
 
   root 'home#index'
