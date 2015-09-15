@@ -26,6 +26,9 @@ gem 'puma',                     '~> 2.12.3'
 gem 'i18n-js',                  '>= 3.0.0.rc11'
 gem 'responders',               '~> 2.0' 
 
+gem 'knife-solo', ">= 0.3.0.pre2"
+gem 'librarian'
+
 group :development, :test do
   gem 'pry-byebug',             '~> 3.2.0'
   gem 'habtm_generator'
