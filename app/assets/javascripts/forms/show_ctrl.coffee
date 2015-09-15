@@ -28,7 +28,7 @@ formsShowCtrl = ->
           form_id: $scope.form.id
           data: data
       ), (response) ->
-        $location.path("/responses/#{response.response.id}")
+        $location.path("/forms/#{$scope.form.id}/responses")
 
 angular.module "app.forms"
   .controller "formsShowCtrl", [
