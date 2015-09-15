@@ -8,6 +8,7 @@
 angular.module("app", [
   "ngRoute",
   "templates",
+  "highcharts-ng"
   "Devise",
   "ngCookies",
   "ngResource"

@@ -1,7 +1,7 @@
 formsResponsesShowCtrl = ->
   ($scope, FormResponse, $routeParams) ->
     $scope.ready = false
-    
+ 
     isChartable = (type) -> type == "checkbox" || type == "radio" || type == "text"
 
     prepareQuestion = (question) ->
